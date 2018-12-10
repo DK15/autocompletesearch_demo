@@ -68,9 +68,7 @@ class _AutoCompleteState extends State<AutoComplete> {
                 key: key,
                 suggestions: PlayersViewModel.players,
                 itemBuilder: (context, item) {
-                  return Container(
-                    color: Colors.blueAccent,
-                    child: Row(
+                  return Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(item.autocompleteterm,
@@ -81,12 +79,8 @@ class _AutoCompleteState extends State<AutoComplete> {
                         padding: EdgeInsets.all(15.0),
                       ),
                       Text(item.country,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold
-                        ),
                       )
                     ],
-                  )
                   );
                 },
                 itemSorter: (a, b) {
